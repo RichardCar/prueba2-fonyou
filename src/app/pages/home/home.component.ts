@@ -23,18 +23,15 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     
-    setTimeout(() => {
-      $('.carousel').carousel({
-        interval: 2000
-      });
-    }, 100);
-    
   }
 
   setDataCarousel(): void {
     this.requestService.getJson('plans_mobile').subscribe((resp: any) => {
       console.log(resp);
       this.dataCarousel = resp.plans;
+      $('.carousel').carousel({
+        interval: 2000
+      });
     }, error => {
       console.error('Error obteniendo json data', error);
     });

@@ -25,7 +25,10 @@
             <form action="" (ngSubmit)="sendPin(myFormPin)" #myFormPin="ngForm">
                 <div class="form-group text-left">
                     <label class="form-label ">Código de verificación:</label>
-                    <input type="number" placeholder="" class="form-control" name="pin" pattern="^(\d{10})$" required [(ngModel)]="phone.pin" #pin=ngModel>
+                    <input type="number" placeholder="" class="form-control" name="pin" pattern="^(\d{4})$" required [(ngModel)]="pin_code" [class.is-invalid]="pin.invalid && pin.touched" #pin=ngModel>
+                    <div id="validationServer03Feedback" class="invalid-feedback">
+                        Porfavor ingrese el pin de 4 digitos
+                    </div>
                 </div>
                 <hr>
                 <div class="form-group text-center">

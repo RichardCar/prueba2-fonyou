@@ -26,7 +26,7 @@ export class RequestService {
     );
   }
 
-  getPin(pin: string) {
+  getPin(pin: number) {
     return this.http.get(`${ this.endPoint }/phones/${pin}.json`);
   }
 

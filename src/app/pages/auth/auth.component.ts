@@ -14,6 +14,7 @@ export class AuthComponent implements OnInit {
 
   phone: PhoneModel = new PhoneModel();
   showFormPin = false;
+  pin_code: number;
 
   constructor(private requestService: RequestService,
     private router: Router) { }
@@ -78,7 +79,7 @@ export class AuthComponent implements OnInit {
     if (form.invalid) {
       return;
     }
-    this.requestService.getPin(this.phone.pin).subscribe(resp => {
+    this.requestService.getPin(this.pin_code).subscribe(resp => {
       console.log(resp);
       this.router.navigate(['/home']);
     }, error => {
