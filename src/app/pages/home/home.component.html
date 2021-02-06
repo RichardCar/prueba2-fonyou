@@ -1,0 +1,198 @@
+<div class="row animated fadeIn faster">
+
+    <div class="col text-center border shadow rounded">
+        <h2 class="text-danger "> ¡ Conoce la nueva forma de pago !</h2>
+        <p> Compra paquetes o recargas con Daviplata, Nequi o PSE</p>
+
+        <div class="row bg-dark text-white p-2 mx-3">
+            <div class="col text-center">
+                <h5> Recomendado para ti</h5>
+            </div>
+        </div>
+        <div class="row border shadow mx-3">
+            <div class="col-1">
+                <a class="carousel-control-prev text-danger" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon text-danger" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </div>
+            <div class="col-9 col-md-10">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <!-- slide1 -->
+                            <div class="row m-2">
+                                <div class="col-12 col-md-4 text-justify">
+                                    <h6 class="text-danger">
+                                        {{dataCarousel[0].desc | uppercase}}
+                                    </h6>
+                                    <p>
+                                        Costo: {{dataCarousel[0].price}}
+                                    </p>
+                                    <button type="button" class="btn btn-info text-wrap pt-2" (click)="buyPlan(dataCarousel[0])">  
+                                    Lo quiero
+                                </button>
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <div class="row my-3">
+                                        <div class="col-6 col-md-4">
+                                            <span class="h6"> Minutos </span><br>
+                                            <span class="text-danger"> {{dataCarousel[0].minutes}}.</span><br>
+                                            <i class="fas fa-mobile-alt text-danger"></i>
+                                        </div>
+                                        <div class="col-6 col-md-4">
+                                            <span class="h6"> {{dataCarousel[0].megas}} </span><br>
+                                            <span class="text-danger"> Megas</span><br>
+                                            <i class="fa fa-globe text-danger" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="col-6 col-md-4" style="margin: 0 auto;">
+                                            <span class="h6"> SMS </span><br>
+                                            <span class="text-danger"> {{dataCarousel[0].sms}}.</span><br>
+                                            <i class="fas fa-sms text-danger"></i>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2 ">
+                                        <div class="col text-center">
+                                            Incluye:
+                                            <p [innerHTML]="dataCarousel[0].include">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <!-- slide2 -->
+                            <div class="row m-2">
+                                <div class="col-12 col-md-4 text-justify">
+                                    <h6 class="text-danger">
+                                        {{dataCarousel[1].desc | uppercase}}
+                                    </h6>
+                                    <p>
+                                        Costo: {{dataCarousel[1].price}}
+                                    </p>
+                                    <button type="button" class="btn btn-info text-wrap pt-2" (click)="buyPlan(dataCarousel[1])">  
+                                    Lo quiero
+                                </button>
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <div class="row my-3">
+                                        <div class="col-6 col-md-4">
+                                            <span class="h6"> Minutos </span><br>
+                                            <span class="text-danger"> {{dataCarousel[1].minutes}}.</span><br>
+                                            <i class="fas fa-mobile-alt text-danger"></i>
+                                        </div>
+                                        <div class="col-6 col-md-4">
+                                            <span class="h6"> {{dataCarousel[1].megas}} </span><br>
+                                            <span class="text-danger"> Megas</span><br>
+                                            <i class="fa fa-globe text-danger" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="col-6  col-md-4" style="margin: 0 auto;">
+                                            <span class="h6"> SMS </span><br>
+                                            <span class="text-danger"> {{dataCarousel[1].sms}}.</span><br>
+                                            <i class="fas fa-sms text-danger"></i>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2 ">
+                                        <div class="col text-center">
+                                            Incluye:
+                                            <p [innerHTML]="dataCarousel[1].include">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <!-- slide3 -->
+                            <div class="row m-2">
+                                <div class="col-12 col-md-4 text-justify">
+                                    <h6 class="text-danger">
+                                        {{dataCarousel[2].desc | uppercase}}
+                                    </h6>
+                                    <p>
+                                        Costo: {{dataCarousel[2].price}}
+                                    </p>
+                                    <button type="button" class="btn btn-info text-wrap pt-2" (click)="buyPlan(dataCarousel[2])">  
+                                    Lo quiero
+                                </button>
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <div class="row my-3">
+                                        <div class="col-6 col-md-4">
+                                            <span class="h6"> Minutos </span><br>
+                                            <span class="text-danger"> {{dataCarousel[2].minutes}}.</span><br>
+                                            <i class="fas fa-mobile-alt text-danger"></i>
+                                        </div>
+                                        <div class="col-6 col-md-4">
+                                            <span class="h6"> {{dataCarousel[2].megas}} </span><br>
+                                            <span class="text-danger"> Megas</span><br>
+                                            <i class="fa fa-globe text-danger" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="col-6 col-md-4" style="margin: 0 auto;">
+                                            <span class="h6"> SMS </span><br>
+                                            <span class="text-danger"> {{dataCarousel[2].sms}}.</span><br>
+                                            <i class="fas fa-sms text-danger"></i>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2 ">
+                                        <div class="col text-center">
+                                            Incluye:
+                                            <p [innerHTML]="dataCarousel[2].include">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-1">
+                <a class="carousel-control-next text-danger text-danger" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- buttons -->
+        <div class="row m-2">
+            <div class="col-6 col-sm-3 mt-2 text-danger">
+                <i class="fas fa-box-open"></i> <br>
+                <button type="button" class="btn btn-danger text-wrap pt-2">  
+                    Paquetes
+                </button>
+            </div>
+            <div class="col-6 col-sm-3 mt-2 text-danger">
+                <i class="fas fa-mobile-alt"></i> <br>
+
+                <button type="submit" class="btn btn-danger text-wrap pt-2">  
+                    Recargas
+                </button>
+            </div>
+            <div class="col-6 col-sm-3 mt-2 text-danger">
+                <i class="fas fa-hand-holding-usd"></i> <br>
+
+                <button type="submit" class="btn btn-danger text-wrap pt-2">  
+                    Adelantos
+                </button>
+            </div>
+            <div class="col-6 col-sm-3 mt-2 text-danger">
+                <i class="fa fa-gift" aria-hidden="true"></i><br>
+                <button type="submit" class="btn btn-danger text-wrap pt-2">  
+                    Regala paquetes
+                </button>
+            </div>
+        </div>
+
+
+    </div>
+</div>

@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  endpoint: 'https://fonyou-prueba-default-rtdb.firebaseio.com/'
 };
 
 /*

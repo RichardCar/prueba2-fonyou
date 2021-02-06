@@ -1,0 +1,27 @@
+{
+    "plans": [{
+        "id": 1,
+        "desc": "6 Días con minutos ilimitados y 170 MB",
+        "price": "$6.000",
+        "minutes": "Ilim.",
+        "megas": "170",
+        "sms": "Ilim",
+        "include": "<i class='fa fa-whatsapp text-danger mr-1' aria-hidden='true'></i><i class='fa fa-facebook text-danger' aria-hidden='true'></i>"
+    }, {
+        "id": 2,
+        "desc": "10 Días con minutos ilimitados y 500 MB",
+        "price": "$15.000",
+        "minutes": "Ilim.",
+        "megas": "500",
+        "sms": "Ilim",
+        "include": "<i class='fa fa-whatsapp text-danger mr-1' aria-hidden='true'></i> <i class='fa fa-twitter text-danger mr-1' aria-hidden='true'></i><i class='fa fa-facebook text-danger' aria-hidden='true'></i>"
+    }, {
+        "id": 3,
+        "desc": "15 Días con minutos ilimitados y 2 GB",
+        "price": "$25.000",
+        "minutes": "Ilim.",
+        "megas": "2000",
+        "sms": "Ilim",
+        "include": "<i class='fa fa-whatsapp text-danger mr-1' aria-hidden='true'></i> <i class='fa fa-twitter text-danger mr-1' aria-hidden='true'></i><i class='fa fa-facebook text-danger' aria-hidden='true'></i>"
+    }]
+}

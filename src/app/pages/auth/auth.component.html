@@ -1,0 +1,45 @@
+<div class="row animated fadeIn faster">
+    <div class="col text-center border shadow rounded">
+        <h3 class="text-danger "> Bienvenido</h3>
+        <p> {{!showFormPin ? "Ingresa tu número claro de 10 dígitos y pulsa 'Continuar'" : "Por favor ingresa el código enviado via SMS"}}</p>
+        <!-- form phone number -->
+        <ng-container *ngIf="!showFormPin">
+            <form action="" (ngSubmit)="continueProcess(myForm)" #myForm="ngForm">
+                <div class="form-group text-left">
+                    <label class="form-label ">Número Claro:</label>
+                    <input type="number" placeholder="" class="form-control" name="number_phone" pattern="^(\d{10})$" required [(ngModel)]="phone.numberPhone" #number_phone=ngModel [class.is-invalid]="number_phone.invalid && number_phone.touched" length=10>
+                    <div id="validationServer03Feedback" class="invalid-feedback">
+                        Porfavor ingrese el número claro de 10 dígitos
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-danger" [disabled]="myForm.invalid">  
+                            Continuar
+                        </button>
+                </div>
+            </form>
+        </ng-container>
+        <!-- form Pin -->
+        <ng-container *ngIf="showFormPin">
+            <form action="" (ngSubmit)="sendPin(myFormPin)" #myFormPin="ngForm">
+                <div class="form-group text-left">
+                    <label class="form-label ">Código de verificación:</label>
+                    <input type="number" placeholder="" class="form-control" name="pin" pattern="^(\d{10})$" required [(ngModel)]="phone.pin" #pin=ngModel>
+                </div>
+                <hr>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-danger w-25" [disabled]="myFormPin.invalid">  
+                            Validar
+                        </button><br>
+                    <div class="mt-3 text-center">
+                        <a href="http://" target="_blank" rel="noopener noreferrer"> Envíar un nuevo pin</a>
+                    </div>
+                </div>
+            </form>
+        </ng-container>
+
+
+
+    </div>
+</div>
