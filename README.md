@@ -8,7 +8,7 @@ El enrutamiento se realiza utilizando lazy-loading para mejor rendimiento
 Para ejecutar satisfactoriamente la aplicación por favor instale las dependencias a tráves del comando 
 `npm install`.
 
-Se utiliza el lenguaje español para codificar.
+Se utiliza el lenguaje inglés para codificar.
 
 Para el backend se utiliza el  REST API de Firebase ( Real time DataBase).
 
